@@ -1,3 +1,7 @@
+#pragma once
+
+//Same approach as IntegralTypes.h but allows for floats and doubles to cover a wider range of types.
+
 template<typename T>
 struct st_numeric
 {
