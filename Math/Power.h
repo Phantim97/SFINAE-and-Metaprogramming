@@ -1,8 +1,8 @@
 //Compile time exponentiation
-template <int b, int e>
+template <int b, unsigned int e>
 struct Power
 {
-	static const int value = b * Power<b, e - 1>::val;
+	static const int value = b * Power<b, e - 1>::value;
 };
 
 template<int b>
