@@ -1,6 +1,8 @@
 #pragma once
 //SFINAE approach 
 
+//From Thomas Kim's: https://www.youtube.com/watch?v=TEmUnxYTTQs&list=PL1_C6uWTeBDF4oRLtCP_NqFtzP1DrQC6f
+
 template<typename T>
 struct st_integer
 {
