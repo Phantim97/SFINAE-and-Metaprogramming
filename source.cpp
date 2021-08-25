@@ -1,6 +1,6 @@
 #include <iostream>
-#include "Math/RangedSum.h"
-#include "Math/Power.h"
+#include "MetaMath/RangedSum.h"
+#include "MetaMath/Power.h"
 
 void power_and_ranged_sum()
 {
