@@ -1,5 +1,3 @@
-//Rules for Ranged Sum
-//Integral types only
 template<int l, int h>
 struct RangedSum
 {
