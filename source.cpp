@@ -2,6 +2,7 @@
 #include "MetaMath/RangedSum.h"
 #include "MetaMath/Power.h"
 #include "MetaMath/MetaCalculator.h"
+#include "MetaMath/Fraction.h"
 
 void power_and_ranged_sum()
 {
@@ -24,6 +25,21 @@ void calc_test()
 	//c % 2;
 	std::cout << "Current Value: " << c2 << '\n';
 }
+
+#ifdef WIP
+void fraction_sample()
+{
+	//SFINAE Fraction class
+	Fraction f1(1, 4);
+	const short num = 2;
+	const short denom = 3;
+	Fraction f2(num, denom);
+	Fraction f3(2, 5);
+	Fraction f4(2, denom);
+	f1 + f3;
+	std::cout << f1 + f2 << '\n';
+}
+#endif
 
 int main()
 {

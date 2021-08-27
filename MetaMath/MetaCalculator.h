@@ -37,12 +37,11 @@ public:
 		}
 	}
 
-	//These templates separate the 
-
+	//SFINAE out float and doubles for numeric_t cases
 	template<typename S, typename = numeric_t<S>>
 	T operator+(const S& v)
 	{
-		this->_val += v;
+		this->_val += static_cast<T>(v);
 		this->_print_result();
 		return this->_val;
 	}
@@ -50,7 +49,7 @@ public:
 	template<typename S, typename = numeric_t<S>>
 	T operator-(const S& v)
 	{
-		this->_val -= v;
+		this->_val -= static_cast<T>(v);
 		this->_print_result();
 		return this->_val;
 	}
@@ -58,7 +57,7 @@ public:
 	template<typename S, typename = numeric_t<S>>
 	T operator*(const S& v)
 	{
-		this->_val *= v;
+		this->_val *= static_cast<T>(v);
 		this->_print_result();
 		return this->_val;
 	}
@@ -66,7 +65,7 @@ public:
 	template<typename S, typename = numeric_t<S>>
 	T operator/(const S& v)
 	{
-		this->_val /= v;
+		this->_val /= static_cast<T>(v);
 		this->_print_result();
 		return this->_val;
 	}
@@ -83,7 +82,7 @@ public:
 	template<typename S, typename = integer_t<S>>
 	same_t<T, S> operator%(const S& v)
 	{
-		this->_val %= v;
+		this->_val %= static_cast<T>(v);
 		this->_print_result();
 		return this->_val;
 	}
