@@ -6,8 +6,8 @@
 
 void power_and_ranged_sum()
 {
-	std::cout << Power<2, 5>::value << '\n';;
-	std::cout << RangedSum<55, 60>::sum << '\n';;
+	std::cout << Power<2, 5>::value << '\n';
+	std::cout << RangedSum<55, 60>::sum << '\n';
 }
 
 void calc_test()
@@ -26,7 +26,6 @@ void calc_test()
 	std::cout << "Current Value: " << c2 << '\n';
 }
 
-#ifdef WIP
 void fraction_sample()
 {
 	//SFINAE Fraction class
@@ -35,11 +34,12 @@ void fraction_sample()
 	const short denom = 3;
 	Fraction f2(num, denom);
 	Fraction f3(2, 5);
-	Fraction f4(2, denom);
+	Fraction f4(static_cast<short>(2), denom);
 	f1 + f3;
 	std::cout << f1 + f2 << '\n';
+	std::cout << f1 / f2 << '\n';
+	std::cout << f4 * f3 << '\n';
 }
-#endif
 
 int main()
 {
@@ -47,5 +47,6 @@ int main()
 
 	calc_test();
 
+	fraction_sample();
 	return 0;
 }
