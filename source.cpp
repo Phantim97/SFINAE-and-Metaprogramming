@@ -35,6 +35,7 @@ void fraction_sample()
 	Fraction f2(num, denom);
 	Fraction f3(2, 5);
 	Fraction f4(static_cast<short>(2), denom);
+	Fraction f5(2, denom);
 	f1 + f3;
 	std::cout << f1 + f2 << '\n';
 	std::cout << f1 / f2 << '\n';
