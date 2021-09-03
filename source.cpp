@@ -36,10 +36,11 @@ void fraction_sample()
 	Fraction f3(2, 5);
 	Fraction f4(static_cast<short>(2), denom);
 	Fraction f5(2, denom);
-	f1 + f3;
+	Fraction f6 = f1 + f3;
 	std::cout << f1 + f2 << '\n';
 	std::cout << f1 / f2 << '\n';
 	std::cout << f4 * f3 << '\n';
+	std::cout << f3.decimal_representation() << '\n';
 }
 
 int main()

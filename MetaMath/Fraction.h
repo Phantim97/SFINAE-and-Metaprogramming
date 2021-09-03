@@ -51,8 +51,8 @@ public:
 		return os;
 	}
 
-	double decimal_representation()
+	double decimal_representation() const
 	{
-		return this->_numer / this->denom;
+		return static_cast<double>(this->_numer) / this->_denom;
 	}
 };
