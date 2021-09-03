@@ -1,6 +1,5 @@
 #include "../Types/IntegralTypes.h"
 
-//Placeholder until Template Class operations are resolved resolved.
 //Must have an integral type to be a fraction
 template<typename T, typename = integer_t<T>>
 class Fraction
