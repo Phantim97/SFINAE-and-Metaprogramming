@@ -8,4 +8,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/MetaMath)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/Types)
 
-add_executable(main source.cpp "MetaMath/Fraction.h")
+add_executable(main source.cpp)
