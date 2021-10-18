@@ -84,7 +84,7 @@ struct st_numeric<float>
 
 //value template using constexpr keyword
 template<typename T>
-constexpr bool is_numeric = st_numeric<T>::value; // compile time resolution
+constexpr bool is_numeric = st_numeric<T>::val; // compile time resolution
 
 //using template - type alias
 template<typename T>
