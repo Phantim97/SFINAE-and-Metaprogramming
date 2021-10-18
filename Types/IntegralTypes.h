@@ -71,7 +71,7 @@ struct st_integer<unsigned long long>
 
 //value template using constexpr keyword
 template<typename T>
-constexpr bool is_integer = st_integer<T>::value; // compile time resolution
+constexpr bool is_integer = st_integer<T>::val; // compile time resolution
 
 //using template - type alias
 template<typename T>
