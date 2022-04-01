@@ -3,6 +3,7 @@
 #include "MetaMath/Power.h"
 #include "MetaMath/MetaCalculator.h"
 #include "MetaMath/Fraction.h"
+#include "ScopedTimer/ScopedTimer.h"
 
 void power_and_ranged_sum()
 {
@@ -34,13 +35,44 @@ void fraction_sample()
 	const short denom = 3;
 	Fraction f2(num, denom);
 	Fraction f3(2, 5);
-	Fraction f4(static_cast<short>(2), denom);
+	Fraction f4(2, denom);
 	Fraction f5(2, denom);
 	Fraction f6 = f1 + f3;
 	std::cout << f1 + f2 << '\n';
 	std::cout << f1 / f2 << '\n';
 	std::cout << f4 * f3 << '\n';
 	std::cout << f3.decimal_representation() << '\n';
+}
+
+//Scoped Timer functions
+void f1()
+{
+	ScopedTimer<std::chrono::milliseconds> st;
+
+	long double sum = 0.0;
+
+	for (int i = 0; i < 10000000; i++)
+	{
+		sum += i * 65.463;
+	}
+}
+
+void f2()
+{
+	ScopedTimer<std::chrono::nanoseconds> st;
+
+	long double sum = 0.0;
+
+	for (int i = 0; i < 10000000; i++)
+	{
+		sum += i * 65.463;
+	}
+}
+
+void timer_demo()
+{
+	f1();
+	f2();
 }
 
 int main()
@@ -50,5 +82,7 @@ int main()
 	calc_test();
 
 	fraction_sample();
+
+	timer_demo();
 	return 0;
 }

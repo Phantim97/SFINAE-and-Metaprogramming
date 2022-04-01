@@ -7,5 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/MetaMath)
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/Types)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/ScopedTimer)
 
 add_executable(main source.cpp)

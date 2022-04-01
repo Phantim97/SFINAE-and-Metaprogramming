@@ -1,5 +1,6 @@
-#include "../Types/IntegralTypes.h" //Checks for integral types
-#include "../Types/NumericTypes.h" //Checks for numeric types
+#include "Types/IntegralTypes.h" //Checks for integral types
+#include "Types/NumericTypes.h" //Checks for numeric types
+#include "Types/SameCheck.h"
 #include <iostream>
 
 //SFINAE out all non numerics for numeric_t checks and all non-integral types for integer_t checks
