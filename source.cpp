@@ -48,7 +48,7 @@ void fraction_sample()
 //Scoped Timer functions
 void f1()
 {
-	ScopedTimer<std::chrono::milliseconds>();
+	ScopedTimer<std::chrono::milliseconds> st;
 
 	long double sum = 0.0;
 
@@ -60,7 +60,7 @@ void f1()
 
 void f2()
 {
-	ScopedTimer<std::chrono::nanoseconds>();
+	ScopedTimer<std::chrono::nanoseconds> st;
 
 	long double sum = 0.0;
 
