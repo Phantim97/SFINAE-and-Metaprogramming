@@ -4,6 +4,7 @@
 #include "MetaMath/MetaCalculator.h"
 #include "MetaMath/Fraction.h"
 #include "ScopedTimer/ScopedTimer.h"
+#include "Recusrive Metaprogramming/TileRowCombinations.h"
 
 void power_and_ranged_sum()
 {
@@ -73,6 +74,12 @@ void timer_demo()
 {
 	f1();
 	f2();
+}
+
+void tile_row_example()
+{
+	std::cout << TilingCombinations<4>::value << '\n';
+	std::cout << TilingCombinations<3>::value << '\n';
 }
 
 int main()
