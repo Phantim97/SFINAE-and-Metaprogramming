@@ -5,6 +5,7 @@
 #include "MetaMath/Fraction.h"
 #include "ScopedTimer/ScopedTimer.h"
 #include "Recusrive Metaprogramming/TileRowCombinations.h"
+#include "Concepts/ConceptSample.h"
 
 void power_and_ranged_sum()
 {
@@ -80,6 +81,12 @@ void tile_row_example()
 {
 	std::cout << TilingCombinations<4>::value << '\n';
 	std::cout << TilingCombinations<3>::value << '\n';
+}
+
+void concept_example()
+{
+	std::cout << modulus_ret(5, 5) << '\n';
+	//std::cout << modulus_ret(5, 5.0) << '\n'; //Fails
 }
 
 int main()
